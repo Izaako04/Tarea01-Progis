@@ -22,4 +22,10 @@ void calcularCuadrado();
 void calcularParalelogramo();
 void calcularTrianguloA();
 
+//Registro
+int verificar_credenciales(const char *usuario, const char *clave);
+void registrar_bitacora(const char *usuario, const char *accion);
+void obtener_fecha_actual(char *fecha);
+
+
 #endif

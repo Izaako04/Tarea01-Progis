@@ -1,7 +1,7 @@
 all: programa
 
-programa: Main.o Datos.o SuperVolumen.o AreaPerimetro.o
-	gcc -o prueba Main.o Datos.o SuperVolumen.o AreaPerimetro.o
+programa: Main.o Datos.o SuperVolumen.o AreaPerimetro.o Registro.o
+	gcc -o prueba Main.o Datos.o SuperVolumen.o AreaPerimetro.o Registro.o
 
 Main.o: Main.c Datos.h
 	gcc -c Main.c
@@ -14,6 +14,9 @@ SuperVolumen.o: SuperVolumen.c Datos.h
 
 AreaPerimetro.o: AreaPerimetro.c Datos.h
 	gcc -c AreaPerimetro.c
+
+Registro.o: Registro.c Datos.h
+	gcc -c Registro.c
 
 clean:
 	rm -f programa *.o
